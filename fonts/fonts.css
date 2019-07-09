@@ -1,0 +1,13 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "EurostarBlackExtended";
+  src: url("./fonts/eurostarblackextended.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/eurostarblackextended.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/eurostarblackextended.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/eurostarblackextended.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/eurostarblackextended.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/eurostarblackextended.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/eurostarblackextended.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,110 @@
+#slider {
+
+	.slide-1 {
+		background-image: url("../images/slider/1.jpg");
+		@include cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: relative;
+    }
+    
+	.slide-2 {
+		background-image: url("../images/slider/2.jpg");
+		@include cover;
+		background-repeat: no-repeat;
+		background-position: 33% 50%;
+		position: relative;
+    }    
+
+
+	.overlay {
+
+		&:after {
+			@include dark-overlay(0.35);
+		}		
+	}
+	
+	.slider-content {
+		color: #fff;
+		z-index: 1;
+		position: relative;
+		text-align: center;
+        height: 380px;
+        
+		@include tablet {
+			height: 560px;
+		}        
+		
+
+		@include desktop {
+			height: 620px;
+		}
+
+		@include fullhd {
+			height: 800px;
+        }
+        
+		@include xfullhd {
+			height: 950px;
+		}        
+
+		.slider-inner {
+			@include middle;
+		}
+		
+
+		h2 {
+			font-size: 2.2rem;
+			text-transform: uppercase;
+			margin: 0 0 3rem 0;
+			line-height: 1.1;
+            font-family: 'EurostarBlackExtended';
+
+            @include phone {
+                font-size: 2.6rem;
+            }
+
+
+			@include minitablet {
+				font-size: 4rem;
+            }
+            
+            @include tablethor {
+                font-size: 5rem;
+            }
+
+            @include desktop {
+                font-size: 6rem;
+            }       
+            
+            @include xfullhd {
+                font-size: 6.5rem;
+            }            
+	
+		}
+
+		h3 {
+			font-size: 1.8rem;
+			margin: 0;
+			font-weight: 300;
+
+			@include minitablet {
+				font-size: 2rem;
+            }	
+            
+            @include tablethor {
+                font-size: 2.4rem;
+            }     
+            
+            @include desktop {
+                font-size: 3rem;
+            }             
+		}
+
+
+		.btn {
+			margin-top: 5rem;
+		}			
+
+	}		
+}

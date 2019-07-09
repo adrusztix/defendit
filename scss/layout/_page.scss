@@ -1,0 +1,67 @@
+.content {
+    @include make-container();
+    @include make-container-max-widths;
+    margin-top: 6rem;
+
+    // content
+
+    .content-area-wrapper {
+        @include make-row;
+
+        .content-area {
+            @include make-col-ready;
+            @include screen {
+                @include make-col(9);
+            }
+        }
+        
+    // sidebar
+        .widget-area {
+            @include make-col-ready;
+            @include screen {
+                @include make-col(3);
+            }
+        }
+    }
+
+    .entry-title {
+        color: #000;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        padding-bottom: 1.2rem;
+        position: relative;
+        margin-bottom: 4rem;
+        line-height: 1.2;
+    
+        @include tablet {
+            font-size: 3rem;
+        }
+    
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 80px;
+            height: 1px;
+            bottom: 0;
+            background: $primary;        
+        }
+    }    
+
+    #main {
+        font-size: 1.4rem;
+
+        @include tablet {
+            font-size: inherit;
+        }
+
+        .post-image {
+            overflow: hidden;
+            object-fit: cover;
+            width: 100%;
+            height: 310px;
+            margin-bottom: 2rem;
+        }
+        
+    }
+}

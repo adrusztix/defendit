@@ -1,0 +1,176 @@
+.footer-site {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    margin-top: 8rem;
+    background-image: url("../images/footer.jpg");
+    @include cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+    
+    .overlay {
+        @include make-container();
+        @include make-container-max-widths;
+
+		&:after {
+			@include dark-overlay(0.6);
+		}        
+    }
+
+    .footer-content {
+        @include make-row();
+        z-index: 1;
+        position: relative;
+        line-height: 1.8;
+
+        .footer-box {
+            @include make-col-ready;
+
+            margin-bottom: 5rem;
+            font-size: 1.4rem;
+            color: #fff;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:nth-of-type(2), 
+            &:nth-of-type(3) {
+                @include minitablet {
+                    @include make-col(6);
+                    margin-bottom: 0;
+                }
+
+            }
+            
+            &:nth-of-type(1) {
+                @include screen {
+                    @include make-col(7);
+                    margin-bottom: 0;
+                }
+            }
+
+            &:nth-of-type(2) {
+                @include screen {
+                    @include make-col(2);
+                }
+            }
+
+            &:nth-of-type(3) {
+                @include screen {
+                    @include make-col(3);
+                }
+            }
+
+            a {
+                color: #fff;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            h3 {
+                font-family: 'EurostarBlackExtended';
+                color: #fff;
+                margin: 0 0 2rem 0;
+                text-transform: uppercase;
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+
+// bottom
+
+.footer-bottom {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.2rem;
+    background: #000;
+    color: $text-color;
+
+    @include desktop {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        @include minitablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+
+        @include minitablet {
+            justify-content: flex-start;
+        }
+
+        li {
+
+            @include minitablet {
+                margin-right: 2.5rem;
+            }
+
+            @include screen {
+                margin-right: 4rem;
+            }
+
+            a {
+                color: $text-color;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            &:nth-child(3) {
+
+                @include phone {
+                    margin-right: 0;
+                }
+
+                @include minitablet {
+                    margin-right: 0;
+                }
+            }
+
+            .fa {
+                margin-right: 5px;
+                font-size: 1.6rem;
+
+                @include phone {
+                    font-size: 2rem;
+                    margin-right: 8px;
+                    vertical-align: bottom;
+                }
+            }
+            
+        }
+    }
+
+    .made {
+        display: none;
+
+        @include minitablet {
+            display: block;
+            color: $text-color;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}

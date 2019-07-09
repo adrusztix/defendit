@@ -1,0 +1,52 @@
+.btn-more {
+    background: $secondary;
+    color: #fff;
+    padding: .7rem 2.5rem;
+    position: relative;
+    border: none;
+
+    &:hover {
+        background: $primary;
+        color: #fff;
+    }
+
+    &:after {
+        font-family: 'FontAwesome';
+        content: "\f054";
+        font-size: 1.8rem;
+        display: block;
+        background: $primary;
+        color: #fff;
+        position: absolute;
+        right: -41px;
+        top: 0;
+        height: 100%;
+        width: 40px;
+        text-align: center;
+        padding-top: 7px;
+    }
+}
+
+.btn-white {
+    background: #fff;
+    color: $primary;
+    border: 1px solid #fff;
+
+    &:hover {
+        background: transparent;
+        color: #fff;
+    }
+}
+
+.btn-blog {
+    padding: .7rem 2.5rem;
+    border: 1px solid $primary;
+    color: $primary;
+    background: #fff;
+    font-size: 1.4rem;
+
+    &:hover {
+        background: $primary;
+        color: #fff;
+    }
+}

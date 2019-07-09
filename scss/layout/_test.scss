@@ -1,0 +1,43 @@
+.container-custom {
+  @include make-container();
+  @include make-container-max-widths;
+}
+
+.row-custom {
+  @include make-row();
+}
+
+.banana {
+  @include make-col-ready;
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+  @include media-breakpoint-up(md) {
+    @include make-col(4);
+  }
+  p {
+    color: red;
+    font-weight: 600;
+  }
+}
+
+
+.akapit {
+  @include make-col-ready;
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+  @include media-breakpoint-up(md) {
+    @include make-col(4);
+  }
+  p {
+    // color: green;
+    // font-weight: 600;
+    @extend .lead;
+  }
+}
+
+.flex {
+  display: flex;
+}
+

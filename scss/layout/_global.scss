@@ -1,0 +1,46 @@
+html {
+    font-size: 62.5%; // 10px
+  }
+  
+  
+a {
+    @include basic-transition;
+}
+
+a:active, a:focus, button:focus {
+    outline: none;
+}
+
+.site-header {
+    font-family: 'EurostarBlackExtended';
+    color: #000;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    padding-bottom: 1.2rem;
+    position: relative;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    line-height: 1;
+
+    @include minitablet {
+        font-size: 3.6rem;
+    }
+
+    @include desktop {
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+    }
+
+    &:before {
+        content: "";
+        @include middle-x;
+        width: 80px;
+        height: 1px;
+        bottom: 0;
+        background: $primary;        
+    }
+}
+
+
+

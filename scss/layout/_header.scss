@@ -1,0 +1,190 @@
+.contact-top-site {
+    @include make-container();
+    @include make-container-max-widths;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+
+        @include phone {
+            font-size: 1.4rem;
+        }
+
+        @include tablet {
+            justify-content: flex-end;
+        }
+
+        li {
+
+            @include tablet {
+                margin-right: 60px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $secondary;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            &:nth-child(3) {
+                display: none;
+
+                @include phone {
+                    display: block;
+                    margin-right: 0;
+                }
+
+                @include tablet {
+                    margin-right: 0;
+                }
+            }
+
+            .fa {
+                color: $primary;
+                margin-right: 5px;
+                font-size: 1.6rem;
+
+                @include phone {
+                    font-size: 2rem;
+                    margin-right: 8px;
+                    vertical-align: bottom;
+                }
+            }
+            
+        }
+    }
+}
+
+// menu
+
+.header {
+    background: $secondary;
+    border-bottom: 1px solid #fff;
+
+	.logo {
+	    background: url("../images/logo.svg") no-repeat;
+	    width: 210px;
+        height: 90px;  
+    } 
+
+    .navbar {
+        padding: 2rem 0;
+
+		.navbar-collapse {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #414141;
+
+			@include screen {
+                margin-top: 0;
+                padding-top: 0;
+                border: none;
+			}
+		}        
+
+		.navbar-toggler {
+            background: transparent;
+            border: none;
+            padding: 0;
+		}
+
+		.navbar-toggler-icons {
+			background: #fff;
+			height: 5px;
+			width: 45px;
+			display: block;
+			margin-bottom: 7px;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }  
+        
+        .nav-item {
+            padding-right: 4rem;
+            
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+
+        .nav-link {
+            text-transform: uppercase;
+            color: #fff;      
+            font-family: 'EurostarBlackExtended';
+            font-size: 1.8rem;
+            
+            @include screen {
+                padding: 0;
+            }
+
+            &:hover {
+                color: $primary;
+            }
+            
+        }
+
+        .dropdown-menu {
+            font-size: 1.4rem;
+            background: transparent;
+            border: none;
+            margin-bottom: 1.3rem;
+
+            @include minitablet {
+                font-size: 1.6rem;
+            }
+
+            @include screen {
+                background: $primary;
+                padding: 1.5rem 0;
+                margin-top: 2rem;
+            }
+            
+            .dropdown-item {
+                color: $primary;
+                padding-left: 0;
+                padding-right: 0;
+
+                @media all and (max-width: 1024px) {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                }
+                
+                &:hover {
+                    background: transparent;
+                    color: #fff;
+                }
+
+                @include minitablet {
+                    padding-left: 3rem;
+                    text-transform: uppercase;
+
+                }
+                
+                @include screen {
+                    padding: .5rem 2rem;
+                    color: #fff;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: $primary;
+                        background: #fff;
+                    }
+                }
+
+            }
+        }
+        
+    }
+}

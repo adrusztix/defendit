@@ -1,0 +1,40 @@
+// ---------------------
+//     GENERAL
+// ---------------------
+
+@import "../fonts/fonts.css";
+
+@import "base/bootstrap";
+
+// ---------------------
+//     HELPERS
+// ---------------------
+
+@import "helpers/resolutions";
+@import "helpers/mixins";
+
+// ---------------------
+//     COMPONENTS
+// ---------------------
+
+@import "components/bxslider";
+
+// ---------------------
+//     LAYOUT
+// ---------------------
+
+@import "layout/global";
+@import "layout/buttons";
+@import "layout/header";
+@import "layout/test";
+@import "layout/slider";
+@import "layout/page";
+@import "layout/sidebar";
+@import "layout/footer";
+
+// ---------------------
+//     PAGES
+// ---------------------
+
+@import "pages/home";
+@import "pages/archive";
